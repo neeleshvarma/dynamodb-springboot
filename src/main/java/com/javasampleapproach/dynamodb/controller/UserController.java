@@ -25,7 +25,7 @@ public class UserController {
 	
 	
 	@GetMapping("/users")
-	public List<User> getAll() throws Exception{
+	public List<User> getUsers() throws Exception{
 		List<User> users = (List<User>) repository.findAll();
 		return users;
 	}
@@ -55,7 +55,7 @@ public class UserController {
     }
 	
 	@PutMapping("/user/{id}")
-	public void update(@RequestBody User user, @PathVariable String id) throws Exception {
+	public void updateOrCreateUser(@RequestBody User user, @PathVariable String id) throws Exception {
 		if(repository.exists((user.getId())))
 		{
 			System.out.println("updated user");
