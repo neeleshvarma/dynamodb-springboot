@@ -13,9 +13,9 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.javasampleapproach.dynamodb.controller.WebController;
-import com.javasampleapproach.dynamodb.model.Customer;
-import com.javasampleapproach.dynamodb.repo.CustomerRepository;
+import com.javasampleapproach.dynamodb.controller.UserController;
+import com.javasampleapproach.dynamodb.model.User;
+import com.javasampleapproach.dynamodb.repo.UserRepository;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -23,30 +23,30 @@ public class SpringDataDynamoDbApplicationTests {
 
 	
 	
-	private static final String id = "JSA-3";
-	
-	private Customer customer;
-	private List<Customer> customers;
-	
-	@Mock
-	private CustomerRepository customerRepositoryMock;
-	@InjectMocks
-	private WebController webControllerMock;
-	
-	@Before
-	public void setup() throws Exception {
-		
-		this.customer = Mockito.mock(Customer.class);
-		this.customers = Arrays.asList(customer);
-		Mockito.doReturn(id)
-		.when(this.customer)
-		.getId();
-		
-		
-		MockitoAnnotations.initMocks(this);
-	
-	}
-	
+//	private static final String id = "JSA-3";
+//	
+//	private User customer;
+//	private List<User> customers;
+//	
+//	@Mock
+//	private UserRepository customerRepositoryMock;
+//	@InjectMocks
+//	private UserController webControllerMock;
+//	
+//	@Before
+//	public void setup() throws Exception {
+//		
+//		this.customer = Mockito.mock(User.class);
+//		this.customers = Arrays.asList(customer);
+//		Mockito.doReturn(id)
+//		.when(this.customer)
+//		.getId();
+//		
+//		
+//		MockitoAnnotations.initMocks(this);
+//	
+//	}
+//	
 
 	
 	
