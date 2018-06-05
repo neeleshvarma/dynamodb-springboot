@@ -1,1 +1,1 @@
-added webhook
+added webhook to all events
